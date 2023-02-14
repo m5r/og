@@ -57,7 +57,8 @@
 		"sourcemap": true,
 		"target": "node18",
 		"dts": true,
-		"clean": true
+		"clean": true,
+		"minify": true
 	},
 	"lint-staged": {
 		"*.{ts,tsx}": "prettier --write --cache"
