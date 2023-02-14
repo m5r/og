@@ -1,0 +1,78 @@
+{
+	"name": "@m5r/og",
+	"version": "0.1.0",
+	"description": "Generate Open Graph Images dynamically from HTML/CSS without a browser",
+	"license": "MPL-2.0",
+	"type": "module",
+	"main": "dist/index.cjs",
+	"exports": {
+		"./package.json": "./package.json",
+		".": {
+			"import": "./dist/index.js",
+			"default": "./dist/index.cjs"
+		},
+		"./vendor/*": "./vendor/*"
+	},
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/**/*",
+		"vendor/**/*"
+	],
+	"author": {
+		"name": "Mokhtar Mial",
+		"email": "mokht@rmi.al"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/m5r/og.git"
+	},
+	"scripts": {
+		"prepare": "husky install",
+		"build": "tsup"
+	},
+	"dependencies": {
+		"@resvg/resvg-js": "2.4.0",
+		"satori": "0.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "18.13.0",
+		"@types/react": "18.0.28",
+		"husky": "8.0.3",
+		"lint-staged": "13.1.2",
+		"npm-run-all": "4.1.5",
+		"prettier": "2.8.4",
+		"tsup": "6.6.3",
+		"typescript": "4.9.5"
+	},
+	"sideEffects": false,
+	"tsup": {
+		"entry": [
+			"src/index.ts"
+		],
+		"format": [
+			"esm",
+			"cjs"
+		],
+		"splitting": false,
+		"sourcemap": true,
+		"target": "node18",
+		"dts": true,
+		"clean": true
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": "prettier --write --cache"
+	},
+	"prettier": {
+		"semi": true,
+		"useTabs": true,
+		"tabWidth": 4,
+		"printWidth": 120,
+		"trailingComma": "all",
+		"bracketSameLine": false,
+		"quoteProps": "as-needed",
+		"singleQuote": false
+	},
+	"engines": {
+		"node": ">=18.12"
+	}
+}

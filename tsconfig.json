@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"lib": ["ESNext", "DOM"],
+		"module": "ESNext",
+		"target": "ES2022",
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"jsx": "react-jsx",
+		"moduleResolution": "node",
+		"strict": true,
+		"skipLibCheck": true,
+		"baseUrl": ".",
+		"noEmit": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}
