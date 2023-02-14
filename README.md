@@ -1,6 +1,6 @@
 # @m5r/og
 
-[https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation](`@vercel/og`) but it works with Node.js
+[`@vercel/og`](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) but it works with Node.js
 
 ## API Reference
 
