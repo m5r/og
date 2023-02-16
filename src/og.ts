@@ -78,7 +78,7 @@ const loadDynamicAsset = (emojiType: EmojiType = "twemoji") => {
 		}
 	};
 	return async (...args: Parameters<typeof fn>) => {
-		const cacheKey = JSON.stringify(args);
+		const cacheKey = JSON.stringify({ ...args, emojiType });
 		const cachedFont = assetCache.get(cacheKey);
 		if (cachedFont) {
 			return cachedFont;

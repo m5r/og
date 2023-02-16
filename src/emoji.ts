@@ -37,12 +37,9 @@ const apis = {
 		"https://cdn.jsdelivr.net/gh/shuding/fluentui-emoji-unicode/assets/" + code.toLowerCase() + "_flat.svg",
 };
 export type EmojiType = keyof typeof apis;
-export function loadEmoji(code: string, type?: EmojiType) {
+export function loadEmoji(code: string, type: EmojiType) {
 	// https://github.com/svgmoji/svgmoji
-	if (!type || !apis[type]) {
-		type = "twemoji";
-	}
-	const api = apis[type];
+	const api = apis[type] ?? apis.twemoji;
 	if (typeof api === "function") {
 		return fetch(api(code));
 	}
