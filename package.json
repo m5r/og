@@ -56,7 +56,9 @@
 		"splitting": false,
 		"sourcemap": true,
 		"target": "node18",
-		"dts": true,
+		"dts": {
+			"entry": ["src/emoji.ts", "src/og.ts", "src/index.ts"]
+		},
 		"clean": true,
 		"minify": true
 	},
