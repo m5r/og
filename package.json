@@ -1,6 +1,6 @@
 {
 	"name": "@m5r/og",
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"description": "Generate Open Graph Images dynamically from HTML/CSS without a browser",
 	"license": "MPL-2.0",
 	"type": "module",
@@ -57,7 +57,11 @@
 		"sourcemap": true,
 		"target": "node18",
 		"dts": {
-			"entry": ["src/emoji.ts", "src/og.ts", "src/index.ts"]
+			"entry": [
+				"src/emoji.ts",
+				"src/og.ts",
+				"src/index.ts"
+			]
 		},
 		"clean": true,
 		"minify": true
